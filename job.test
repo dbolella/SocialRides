@@ -1,0 +1,24 @@
+{       "type":"job",
+        "state":"ready",
+        "customer":"d b",
+        "total_rating":3,
+        "price":15.00,
+        "started_since":1324429221.400007,
+        "data_items":{
+                "customerName" : "d b",
+                "cellNum" : "3248798900" ,
+                "source" : "tafsduk" ,
+                "dest" : "ylhjlk" ,
+                "time" : "2011-12-25 12:20" ,
+                "load" : "" ,
+                "price": "15.00" ,
+                "duration" : "02:30" ,
+                "passengers" : "0" ,
+                "passGender" : "male",
+                "otherGender": "none",
+                "rating" : "3",
+                "language" : "1",
+                "Pickup" : "3523",
+                "Dropoff" : "8896"
+         }
+}

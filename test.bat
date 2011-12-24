@@ -1,0 +1,1 @@
+plink.exe -ssh dbolella@marvin.cs.stevens.edu -pw theDB577j93111 ./socialfarm

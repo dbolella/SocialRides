@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>EduRides</title>
+<link rel="stylesheet" type="text/css" href="view.css" media="all">
+<script type="text/javascript" src="view.js"></script>
+<script type="text/javascript" src="calendar.js"></script>
+</head>
+<body id="main_body" >
+
+	<img id="top" src="top.png" alt="">
+	<div id="form_container">
+
+		<h1><a>SocialRides</a></h1>
+		<form id="form_312109" class="appnitro"  method="post" action="submitJob.php">
+					<div class="form_description">
+			<h2>SocialRides</h2>
+			<p>Need a ride? Fill out the form below to have our service find a driver for you! Then, make sure to check in using your full name to find out the status of your request!</p>
+		</div>
+			<ul >
+
+					<li id="li_1" >
+		<label class="description" for="element_1">Name </label>
+		<span>
+			<input id="first" name= "first" class="element text" maxlength="255" size="8" value=""/>
+			<label>First</label>
+		</span>
+		<span>
+			<input id="last" name= "last" class="element text" maxlength="255" size="14" value=""/>
+			<label>Last</label>
+		</span><p class="guidelines" id="guide_1"><small>Please type in your first and last name.  Please remember that this will also be used to check the status of your request!</small></p>
+		</li>		<li id="li_2" >
+		<label class="description" for="element_2">Phone </label>
+		<span>
+			<input id="phone1" name="phone1" class="element text" size="3" maxlength="3" value="" type="text"> -
+			<label for="element_2_1">(###)</label>
+		</span>
+		<span>
+			<input id="phone2" name="phone2" class="element text" size="3" maxlength="3" value="" type="text"> -
+			<label for="element_2_2">###</label>
+		</span>
+		<span>
+	 		<input id="phone3" name="phone3" class="element text" size="4" maxlength="4" value="" type="text">
+			<label for="element_2_3">####</label>
+		</span>
+		<p class="guidelines" id="guide_2"><small>This is in case the driver must contact you prior to the trip.</small></p>
+		</li>		<li id="li_3" >
+		<label class="description" for="element_3">Date </label>
+		<span>
+			<input id="month" name="month" class="element text" size="2" maxlength="2" value="" type="text"> /
+			<label for="element_3_1">MM</label>
+		</span>
+		<span>
+			<input id="day" name="day" class="element text" size="2" maxlength="2" value="" type="text"> /
+			<label for="element_3_2">DD</label>
+		</span>
+		<span>
+	 		<input id="year" name="year" class="element text" size="4" maxlength="4" value="" type="text">
+			<label for="element_3_3">YYYY</label>
+		</span>
+
+		<span id="calendar_3">
+			<img id="cal_img_3" class="datepicker" src="calendar.gif" alt="Pick a date.">
+		</span>
+		<script type="text/javascript">
+			Calendar.setup({
+			inputField	 : "year",
+			baseField    : "element_3",
+			displayArea  : "calendar_3",
+			button		 : "cal_img_3",
+			ifFormat	 : "%B %e, %Y",
+			onSelect	 : selectDate
+			});
+		</script>
+		<p class="guidelines" id="guide_3"><small>Please enter the date of the trip</small></p>
+		</li>		<li id="li_4" >
+		<label class="description" for="element_4">Pickup Time </label>
+		<span>
+			<input id="hour" name="hour" class="element text " size="2" type="text" maxlength="2" value=""/> :
+			<label>HH</label>
+		</span>
+		<span>
+			<input id="minute" name="minute" class="element text " size="2" type="text" maxlength="2" value=""/> :
+			<label>MM</label>
+		</span>
+		<span>
+			<select class="element select" style="width:4em" id="ampm" name="ampm">
+				<option value="AM" >AM</option>
+				<option value="PM" >PM</option>
+			</select>
+			<label>AM/PM</label>
+		</span><p class="guidelines" id="guide_4"><small>What time would you like to go?</small></p>
+		</li>		<li id="li_5" >
+		<label class="description" for="element_5">Pickup Location </label>
+		<div>
+			<input id="source" name="source" class="element text medium" type="text" maxlength="255" value=""/>
+		</div><p class="guidelines" id="guide_5"><small>Where would you like to meet?</small></p>
+		</li>		<li id="li_6" >
+		<label class="description" for="element_6">Destination </label>
+		<div>
+			<input id="dest" name="dest" class="element text medium" type="text" maxlength="255" value=""/>
+		</div><p class="guidelines" id="guide_6"><small>Where do you want to go?</small></p>
+		</li>		<li id="li_7" >
+		<label class="description" for="element_7">Duration </label>
+		<span>
+			<input id="dhour" name="dhour" class="element text " size="2" type="text" maxlength="2" value=""/> :
+			<label>HH</label>
+		</span>
+		<span>
+			<input id="dminute" name="dminute" class="element text " size="2" type="text" maxlength="2" value=""/> :
+			<label>MM</label>
+		</span><p class="guidelines" id="guide_7"><small>What's your time estimate for the trip?</small></p>
+		</li>		<li id="li_8" >
+		<label class="description" for="element_8">Offer </label>
+		<span class="symbol">$</span>
+		<span>
+			<input id="dollars" name="dollars" class="element text currency" size="10" value="" type="text" /> .
+			<label for="element_8_1">Dollars</label>
+		</span>
+		<span>
+			<input id="cents" name="cents" class="element text" size="2" maxlength="2" value="" type="text" />
+			<label for="element_8_2">Cents</label>
+		</span>
+		<p class="guidelines" id="guide_8"><small>How much would you be willing to offer?</small></p>
+		</li>		<li class="section_break">
+			<h3>Ride Preferences</h3>
+			<p></p>
+		</li>		<li id="li_13" >
+		<label class="description" for="element_13">My Gender </label>
+		<div>
+		<select class="element select medium" id="passGender" name="passGender">
+			<option value="none" selected="selected">Not Specified</option>
+<option value="female" >Female</option>
+<option value="male" >Male</option>
+
+		</select>
+		</div><p class="guidelines" id="guide_13"><small>If you would like, you can specify your gender.</small></p>
+		</li>		<li id="li_14" >
+		<label class="description" for="element_14">Prefered Gender </label>
+		<div>
+		<select class="element select medium" id="otherGender" name="otherGender">
+			<option value="none" selected="selected">No Preference</option>
+<option value="female" >Female</option>
+<option value="male" >Male</option>
+
+		</select>
+		</div><p class="guidelines" id="guide_14"><small>If you prefer to ride with someone of a certain gender, please select it here</small></p>
+		</li>		<li id="li_10" >
+		<label class="description" for="element_10">No. of Passengers </label>
+		<div>
+			<input id="passengers" name="passengers" class="element text small" type="text" maxlength="255" value=""/>
+		</div><p class="guidelines" id="guide_10"><small>If you are travelling with a party, please state how many passengers there wil be</small></p>
+		</li>		<li id="li_11" >
+		<label class="description" for="element_11">Capacity </label>
+		<div>
+			<input id="load" name="load" class="element text medium" type="text" maxlength="255" value=""/>
+		</div><p class="guidelines" id="guide_11"><small>If you plan to bring large items, please specify what kind of items</small></p>
+		</li>		<li id="li_15" >
+		<label class="description" for="element_15">Smoker </label>
+		<span>
+			<input id="smoking" name="smoking" class="element checkbox" type="checkbox" value="1" />
+<label class="choice" for="element_15_1">I prefer/don't mind</label>
+
+		</span><p class="guidelines" id="guide_15"><small>If you are a smoker or don't mind riding with one</small></p>
+		</li>		<li id="li_16" >
+		<label class="description" for="element_16">Handicap </label>
+		<span>
+			<input id="handicap" name="handicap" class="element checkbox" type="checkbox" value="1" />
+<label class="choice" for="element_16_1">I need handicap access</label>
+
+		</span><p class="guidelines" id="guide_16"><small>If you need handicap access, please let us know</small></p>
+		</li>		<li id="li_17" >
+		<label class="description" for="element_17">Language </label>
+		<div>
+		<select class="element select medium" id="language" name="language">
+			<option value="1" selected="selected">English</option>
+<option value="2" >Spanish</option>
+<option value="3" >Russian</option>
+
+		</select>
+		</div><p class="guidelines" id="guide_17"><small>If you prefer someone who speaks English and another language, specify which language you prefer</small></p>
+		</li>		<li id="li_12" >
+		<label class="description" for="element_12">Minimum Rating </label>
+		<div>
+			<input id="rating" name="rating" class="element text medium" type="text" maxlength="255" value=""/>
+		</div><p class="guidelines" id="guide_12"><small>If you have a preference of a driver with a good rating, specify a rating between 1-5</small></p>
+		</li>
+
+					<li class="buttons">
+			    <input type="hidden" name="form_id" value="312109" />
+
+				<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+		</li>
+			</ul>
+		</form>
+		<div id="footer">
+			Generated by <a href="http://www.phpform.org">pForm</a>
+		</div>
+	</div>
+	<img id="bottom" src="bottom.png" alt="">
+	</body>
+</html>
